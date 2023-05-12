@@ -15,8 +15,9 @@ public class ItemServiceApplication implements WebMvcConfigurer {
 
 	// 글로벌 validator 적용하기
 	// 단 각 메서드에 @Validated가 걸려있어야함
-	@Override
-	public Validator getValidator() {
-		return new ItemValidator();
-	}
+	// 또한 validator를 직접 등록할 경우 글로벌 validator가 등록이 되질 않는다.
+//	@Override
+//	public Validator getValidator() {
+//		return new ItemValidator();
+//	}
 }
